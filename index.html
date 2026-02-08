@@ -1,0 +1,641 @@
+<!DOCTYPE html>  
+<html lang="id">  
+<head>  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2EPS80RR9"></script>
+<link rel="preload" as="image" href="logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2EPS80RR9');
+</script>
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Bvandia Science Journey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>  
+    :root {
+      --bg: #fafafa;
+      --text: #222;
+      --dark: #0a0a0a;
+      --accent: #f2a900;
+    }
+
+    body {  
+      font-family: 'Georgia', serif;  
+      margin: 0;  
+      padding: 0;  
+      background-color: var(--bg);  
+      color: var(--text);  
+      line-height: 1.6;  
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-image: radial-gradient(#e5e5e5 1px, transparent 1px);
+  background-size: 30px 30px; /* Jarak antar titik */
+}
+
+    
+/* ===== INTRO OVERLAY (Sangat Smooth) ===== */
+#intro {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.intro-logo {
+  width: 100px;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: introEntrance 1.2s ease forwards;
+}
+
+.intro-quote {
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: left;
+  max-width: 80%;
+  opacity: 0;
+  animation: introEntrance 1.2s ease forwards 0.5s; /* Muncul setelah logo */
+}
+
+@keyframes introEntrance {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===== HERO SECTION (Setelah Intro Hilang) ===== */
+.intro {  
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;  
+  flex-direction: column; /* Kita buat vertikal agar lebih modern */
+  align-items: center;  
+  justify-content: center;  
+  max-width: 800px;  
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Class ini akan dipicu via JS */
+.intro.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-text h2 {  
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2.8rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.intro-text p {  
+  font-size: 1.1rem;  
+  color: #555;  
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+
+.logo-title-wrapper {
+  display: flex;
+  flex-direction: column; /* Logo di atas teks (Gaya Modern) */
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Jarak antara logo dan teks */
+}
+
+.header-logo {
+  width: 60px; /* Ukuran logo di HP, sesuaikan jika kurang besar */
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(242, 169, 0, 0.4)); /* Efek cahaya di sekitar logo */
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+/* Jika ingin logo di samping teks pada layar yang agak lebar */
+@media (min-width: 768px) {
+  .logo-title-wrapper {
+    flex-direction: row; /* Berjejer ke samping */
+    gap: 20px;
+  }
+}
+
+/* Animasi halus untuk logo */
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+
+header {  
+  background-color: var(--dark);  
+  padding: 1.5rem 1rem; 
+  text-align: center;
+  border-bottom: 1px solid rgba(242, 169, 0, 0.2); /* Warna emas samar */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow agar lebih depth */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+
+header h1 {
+  margin: 0;
+  /* Menggunakan font Montserrat yang super tebal */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem; /* Ukuran sedikit naik agar gagah */
+  font-weight: 900; /* Ketebalan maksimal */
+  letter-spacing: -1px; /* Jarak antar huruf dirapatkan agar terlihat lebih solid/keren */
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  line-height: 1.1;
+  
+  /* Animasi Kilau Gradien tetap dipertahankan */
+  background: linear-gradient(
+    to right, 
+    #ffffff 20%, 
+    var(--accent) 40%, 
+    var(--accent) 60%, 
+    #ffffff 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+  
+  /* Tambahan: Shadow halus agar teks lebih "keluar" */
+  text-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Penyesuaian untuk HP Layar Kecil */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* Dekorasi Sains Minimalis */
+.science-icon {
+  position: absolute;
+  color: rgba(242, 169, 0, 0.5); /* Sangat samar agar estetik */
+  font-size: 1.5rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.science-icon:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.science-icon:nth-child(2) { top: 15%; right: 7%; animation-delay: 2s; }
+.science-icon:nth-child(3) { bottom: 10%; left: 8%; animation-delay: 4s; font-size: 2rem; }
+.science-icon:nth-child(4) { bottom: 15%; right: 5%; animation-delay: 4s; font-size: 1rem; }
+
+header:hover .science-icon {
+  color: var(--accent); /* Ikon berubah jadi emas terang saat header di-hover */
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(15deg); }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 400px) {
+  header h1 { font-size: 1.4rem; letter-spacing: 2px; }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(242, 169, 0, 0.15);
+  border-color: var(--accent);
+}
+
+.feature-card i {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+}
+
+.feature-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark);
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 4rem 0;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.6); /* Transparan putih */
+  backdrop-filter: blur(10px); /* Efek blur kaca */
+  border-radius: 20px;
+  border: 1px solid rgba(242, 169, 0, 0.2); /* Border emas samar */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+}
+
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.stat-number {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #777;
+}
+.stat-icon-mini {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+  animation: pulseIcon 2s infinite;
+}
+
+@keyframes pulseIcon {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+
+    /* ===== Nav bar ===== */
+    nav {  
+      display: flex;  
+      justify-content: center;  
+      background-color: #1a1a1a;  
+      padding: 0.5rem 0;  
+      gap: 18px;
+    }  
+
+    nav a {  
+      color: white;  
+      text-decoration: none;  
+      font-weight: 600;  
+      font-size: 0.98rem;  
+      transition: color 0.3s ease;  
+    }  
+
+    nav a:hover {  
+      color: var(--accent);
+      text-decoration: underline;
+    }  
+
+    /* 🔸 Tambahan efek garis bawah untuk link aktif */
+    nav a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 3px;
+    }  
+    .intro-text {  
+      flex: 1;  
+      min-width: 280px;  
+      padding: 1rem 2rem;  
+    }  
+
+    .intro-text h2 {  
+      font-size: 1.8rem;  
+      margin-bottom: 1rem;  
+      color: #333;  
+    }  
+
+    .intro-text p {  
+      font-size: 1rem;  
+      color: #444;  
+      margin-bottom: 0rem;  
+      text-align: justify;
+    }  
+
+    .intro-img {  
+      flex: 1;  
+      min-width: 250px;  
+      text-align: center;  
+      padding: 1rem;  
+    }  
+
+    .intro-img img {  
+      max-width: 80%;  
+      border-radius: 10px;  
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);  
+    }  
+
+    footer {
+      text-align: center;
+      background-color: #111;
+      color: #aaa;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.85rem;
+    }
+    
+.site-footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-social {
+  margin-bottom: 1.2rem;
+}
+
+.footer-social a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-social a {
+  color: #aaa;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f2a900;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+    @media (max-width: 600px) {
+      .contact-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
+  </style>  
+
+  <!-- 🔸 Script untuk mendeteksi halaman aktif -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentPage = location.pathname.split("/").pop();
+      const links = document.querySelectorAll("nav a");
+      links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</head>  
+<body>  
+
+<div id="intro">
+  <img src="logo.svg" alt="Bvandia Science Journey" class="intro-logo">
+  <p class="intro-quote"> "An educated mind is, as it were, composed of all the minds of preceding ages.”<br>— Le Bovier de Fontenelle</p>
+</div>
+
+<header>  
+  <div class="header-decoration">
+    <i class="fas fa-atom science-icon"></i>
+    <i class="fas fa-dna science-icon"></i>
+    <i class="fas fa-microscope science-icon"></i>
+    <i class="fas fa-rocket science-icon"></i>
+
+  </div>
+  
+  <div class="header-content">
+    <div class="logo-title-wrapper">
+      <img src="logo.svg" alt="Logo Bvandia" class="header-logo">
+      <h1>Bvandia Science Journey</h1>  
+    </div>
+  </div>
+</header>
+
+  
+  <nav>  
+    <a href="index.html"  class="active" >Home</a>  
+    <a href="artikel.html">Artikel</a>  
+    <a href="about.html">About</a>  
+    <a href="kontak.html">Kontak</a>  
+  </nav>  
+  
+<section class="intro" id="hero-section">  
+  <div class="intro-text">  
+    <h2>Selamat Datang di Bvandia Science Journey</h2>  
+<p>
+  Kita hidup di era di mana informasi melimpah, namun kebijaksanaan seringkali langka. Di <strong>Bvandia Science Journey</strong>, aku percaya bahwa memahami dunia bukan sekadar menghafal hukum alam, melainkan keberanian untuk mempertanyakan segala sesuatu yang selama ini kita anggap "biasa".
+</p>
+
+<p>
+  Sains adalah alat untuk membedah realitas, sementara rasionalitas adalah navigasi kita di tengah badai emosi. Seperti yang pernah dikatakan oleh <strong>Socrates</strong>, <em>"Kehidupan yang tidak diperiksa tidak layak untuk dijalani."</em> Di sini, setiap fenomena—mulai dari perilaku partikel hingga kerumitan struktur sosial—adalah subjek untuk kita periksa dan renungkan.
+</p>
+
+<p>
+  Aku mencoba menyelaraskan apa yang diajarkan oleh <strong>Albert Einstein</strong>, bahwa <em>"Sains tanpa agama (moral/makna) adalah pincang, dan agama tanpa sains adalah buta."</em> Maka, tulisan-tulisan di sini berupaya mencari titik tengah: bagaimana ilmu pengetahuan bisa membuat kita lebih bijak, lebih rendah hati, dan lebih sadar akan posisi kita di tengah semesta yang luas ini.
+</p>
+
+<p>
+  Selamat datang dalam perjalanan berpikir. Mari kita belajar bahwa melihat kebenaran seringkali membutuhkan lebih dari sekadar mata—ia membutuhkan pikiran yang terbuka dan hati yang kritis.
+</p>
+
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-flask"></i>
+        <h3>Eksplorasi Sains</h3>
+        <p>Membahas fenomena alam dari sudut pandang rasional dan mendalam.</p>
+      </div>
+      
+      <div class="feature-card">
+        <i class="fas fa-brain"></i>
+        <h3>Logika & Sosial</h3>
+        <p>Menyeimbangkan emosi dengan pemikiran kritis dalam dinamika kehidupan.</p>
+      </div>
+      
+      <div class="feature-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Kesadaran Alam</h3>
+        <p>Memahami bagaimana setiap tindakan kita berdampak pada ekosistem global.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 3rem;">  
+      Jika kamu juga percaya bahwa memahami alam berarti memahami diri sendiri, maka selamat datang, kamu sedang berada di tempat yang tepat.  
+    </p>  
+  </div>  
+  
+  <div style="margin: 3rem 0 1rem; text-align: center; border-left: 4px solid var(--accent); padding-left: 15px;">
+  <p style="font-style: italic; color: #666; font-size: 1rem; margin: 0;">
+    "Segala sesuatu yang kita dengar adalah pendapat, bukan fakta. Segala sesuatu yang kita lihat adalah perspektif, bukan kebenaran."
+  </p>
+  <span style="font-size: 0.8rem; color: var(--accent); font-weight: bold;">— Marcus Aurelius</span>
+</div>
+
+  
+<div class="stats-container">
+  <div class="stat-item">
+    <i class="fas fa-heartbeat stat-icon-mini"></i>
+    <span class="stat-number">85,1%</span>
+    <span class="stat-label">Interest</span>
+  </div>
+  <div class="stat-item">
+    <i class="fas fa-comments stat-icon-mini"></i>
+    <span class="stat-number">98,2%</span>
+    <span class="stat-label">Asking</span>
+  </div>
+  <div class="stat-item">
+    <i class="fas fa-lightbulb stat-icon-mini"></i>
+    <span class="stat-number">100%</span>
+    <span class="stat-label">Curiosity</span>
+  </div>
+</div>
+
+
+
+</section>
+
+<footer class="site-footer">
+  <p class="footer-title">Bvandia Science Journey</p>
+
+  <div class="footer-social">
+    <a href="mailto:bimasaktiawannn@gmail.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.instagram.com/bvandia" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@bvandia.science" target="blank" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/bima-saktiawan-502875352" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+
+  <p class="footer-copy">
+  · © 2026 · 
+  </p>
+</footer>
+
+<script>
+setTimeout(() => {
+  const intro = document.getElementById("intro");
+  if (intro) intro.remove();
+}, 3500);
+</script>
+
+  <script>
+      function notif(platform) {alert("kamu akan diarahkan ke " + platform);}
+  </script>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+<script>
+  window.addEventListener("load", () => {
+    const introOverlay = document.getElementById("intro");
+    const heroContent = document.getElementById("hero-section");
+
+    // Waktu tunggu layar hitam (3 detik)
+    setTimeout(() => {
+      // 1. Pudarkan layar hitam
+      introOverlay.style.opacity = "0";
+      introOverlay.style.visibility = "hidden";
+      
+      // 2. Munculkan konten utama setelah layar hitam mulai pudar
+      setTimeout(() => {
+        if(heroContent) {
+          heroContent.classList.add("visible");
+        }
+      }, 500); 
+
+      // 3. Hapus elemen dari DOM agar tidak menghalangi klik
+      setTimeout(() => {
+        introOverlay.remove();
+      }, 1000);
+
+    }, 3000);
+  });
+</script>
+
+
+  
+</body>  
+</html>
