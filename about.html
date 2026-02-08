@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2EPS80RR9"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2EPS80RR9');
+</script>
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Bvandia Science Journey</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>  
+    :root {
+      --bg: #fafafa;
+      --text: #222;
+      --dark: #0a0a0a;
+      --accent: #f2a900;
+    }
+
+    body {  
+      font-family: 'Georgia', serif;  
+      margin: 0;  
+      padding: 0;  
+      background-color: var(--bg);  
+      color: var(--text);  
+      line-height: 1.6;  
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }  
+
+.logo-title-wrapper {
+  display: flex;
+  flex-direction: column; /* Logo di atas teks (Gaya Modern) */
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Jarak antara logo dan teks */
+}
+
+.header-logo {
+  width: 60px; /* Ukuran logo di HP, sesuaikan jika kurang besar */
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(242, 169, 0, 0.4)); /* Efek cahaya di sekitar logo */
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+/* Jika ingin logo di samping teks pada layar yang agak lebar */
+@media (min-width: 768px) {
+  .logo-title-wrapper {
+    flex-direction: row; /* Berjejer ke samping */
+    gap: 20px;
+  }
+}
+
+/* Animasi halus untuk logo */
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+
+header {  
+  background-color: var(--dark);  
+  padding: 1.5rem 1rem; 
+  text-align: center;
+  border-bottom: 1px solid rgba(242, 169, 0, 0.2); /* Warna emas samar */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow agar lebih depth */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+
+header h1 {
+  margin: 0;
+  /* Menggunakan font Montserrat yang super tebal */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem; /* Ukuran sedikit naik agar gagah */
+  font-weight: 900; /* Ketebalan maksimal */
+  letter-spacing: -1px; /* Jarak antar huruf dirapatkan agar terlihat lebih solid/keren */
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  line-height: 1.1;
+  
+  /* Animasi Kilau Gradien tetap dipertahankan */
+  background: linear-gradient(
+    to right, 
+    #ffffff 20%, 
+    var(--accent) 40%, 
+    var(--accent) 60%, 
+    #ffffff 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+  
+  /* Tambahan: Shadow halus agar teks lebih "keluar" */
+  text-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Penyesuaian untuk HP Layar Kecil */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* Dekorasi Sains Minimalis */
+.science-icon {
+  position: absolute;
+  color: rgba(242, 169, 0, 0.5); /* Sangat samar agar estetik */
+  font-size: 1.5rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.science-icon:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.science-icon:nth-child(2) { top: 15%; right: 7%; animation-delay: 2s; }
+.science-icon:nth-child(3) { bottom: 10%; left: 8%; animation-delay: 4s; font-size: 2rem; }
+.science-icon:nth-child(4) { bottom: 15%; right: 5%; animation-delay: 4s; font-size: 1rem; }
+
+header:hover .science-icon {
+  color: var(--accent); /* Ikon berubah jadi emas terang saat header di-hover */
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(15deg); }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 400px) {
+  header h1 { font-size: 1.4rem; letter-spacing: 2px; }
+}
+
+
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 400px) {
+  header h1 { font-size: 1.4rem; letter-spacing: 2px; }
+}
+    /* ===== Nav ===== */
+    nav {  
+      display: flex;  
+      justify-content: center;  
+      background-color: #1a1a1a;  
+      padding: 0.5rem 0;  
+      gap: 18px;
+    }  
+
+    nav a {  
+      color: white;  
+      text-decoration: none;  
+      font-weight: 600;  
+      font-size: 0.98rem;  
+      transition: color 0.3s ease;  
+    }  
+
+    nav a:hover {  
+      color: var(--accent);
+      text-decoration: underline;
+    }  
+
+    nav a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 3px;
+    }  
+
+    /* ===== Konten Utama ===== */
+    .about-title {
+      text-align: center;
+      margin: 2.5rem 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .about-title.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about-title h2 {
+      font-size: 1.9rem;
+      color: #333;
+      display: inline-block;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .about-grid {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    .about-grid.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about-text {
+      flex: 1 1 550px;
+      min-width: 260px;
+    }
+
+    .about-text p {
+      margin-bottom: 1.15rem;
+      text-align: justify;
+      font-size: 1.03rem;
+      color: var(--text);
+    }
+
+    blockquote {
+      margin: 1.25rem 0 1.6rem;
+      padding-left: 16px;
+      border-left: 4px solid var(--accent);
+      color: #333;
+      font-style: italic;
+      background: linear-gradient(90deg, rgba(15,118,110,0.03), transparent);
+    }
+
+    /* ===== Kartu Foto ===== */
+    .about-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(17,17,17,0.06);
+      padding: 16px;
+      max-width: 320px;
+      margin: 0 auto;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(17,17,17,0.1);
+    }
+
+    .about-card .photo {
+      width: 100%;
+      height: auto;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .about-card .caption {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    
+    /* 2. Fitur "The Bvandia Principles" (Karakter) */
+.pillars-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.pillar-item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid var(--accent);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.pillar-item i {
+  color: var(--accent);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.pillar-item strong {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.pillar-item span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* 3. Tanda Tangan Digital */
+.signature {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+    /* ===== Kotak kontak ===== */
+    .contact {
+      margin-top: 1.4rem;
+      background: white;
+      padding: 14px 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      background-color: #111;
+      color: #aaa;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.85rem;
+    }
+    
+.site-footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-social {
+  margin-bottom: 1.2rem;
+}
+
+.footer-social a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-social a {
+  color: #aaa;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f2a900;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+    @media (max-width: 600px) {
+      .contact-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentPage = location.pathname.split("/").pop();
+      document.querySelectorAll("nav a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+
+      const title = document.querySelector(".about-title");
+      const grid = document.querySelector(".about-grid");
+      const footer = document.querySelector(".site-footer");
+
+      setTimeout(() => {
+        title.classList.add("visible");
+        grid.classList.add("visible");
+        footer.classList.add("visible");
+      }, 400);
+    });
+  </script>
+</head>
+
+<body>
+<header>  
+  <div class="header-decoration">
+    <i class="fas fa-atom science-icon"></i>
+    <i class="fas fa-dna science-icon"></i>
+    <i class="fas fa-microscope science-icon"></i>
+    <i class="fas fa-rocket science-icon"></i>
+
+  </div>
+  
+  <div class="header-content">
+    <div class="logo-title-wrapper">
+      <img src="logo.svg" alt="Logo Bvandia" class="header-logo">
+      <h1>Bvandia Science Journey</h1>  
+    </div>
+  </div>
+</header>
+
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="artikel.html">Artikel</a>
+    <a href="about.html" class="active">About</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <main class="container">
+    <div class="about-title">
+      <h2>Hai, gw Bvandia!</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Dari kecil kita semua memiliki yang namanya rasa penasaran, pada saat perjalanan tumbuh menjadi manusia kita akan melihat bagaimana seorang memiliki pengetahuan dan pemikiran yang baik tergantung bagaimana rasa penasaran masa kecilnya difasilitasi oleh lingkungan dan orang tuanya.</p>
+        <p>Aku adalah seorang anak yang rasa penasaran nya difasilitasi oleh lingkunganku yang lumayan baik, mulai dari orang tua dan kakek nenekku yang mempunyai pengalaman dan pengetahuan yang lebih luas. Mereka selalu mengajakku mengekplorasi banyak hal dan menawarkan banyak pelajaran hidup. Hingga tumbuh remaja aku hidup di era dimana informasi tersebar di mana-mana seperti daun yang berserakan di jalanan.</p>
+        <p>Kita bisa membayangkan betapa sulitnya leluhur kita untuk mendapatkan ilmu, pengalaman, dan pelajaran dalam hidup, selain dengan cara mereka harus mencobanya sendiri dengan resiko kegagalan yang sangat bisa terjadi. Dalam sejarahnya kita melihat seorang Johannes Gutenberg yang berhasil menemukan mesin revolusioner yang membuat mobilitas ilmu pengetahuan tersebar dengan cepat. Hingga era internet seperti sekarang, hanya perlu sebuah benda kecil di tangan yang mampu menampung ribuan halaman dalam sebuah pancaran cahaya.</p>
+        <p>Di sini aku ingin melestarikan perkembangan para tokoh revolusioner untuk mendokumentasikan pemikiran-pemikiran hebat dan pemahaman alam yang terus kita pelajari untuk memahami misteri tempat yang kita pijak.</p>
+
+        <blockquote>“An educated mind is, as it were, composed of all the minds of preceding ages.”<br>— Le Bovier de Fontenelle</blockquote>
+
+        <p>Kenalin aku Vandia, sedikit cerita kenapa aku menggunakan nama <strong>Bvandia</strong>, nama ini awalnya berasal dari gabungan bunyi yang terinspirasi oleh “Hindia” yang ku anggap sebagai simbol suara generasi yang berpikir, merasa, dan mencari. Namun, dalam transformasinya, Bvandia melangkah lebih jauh: <em>dari suara menjadi kesadaran.</em></p>
+
+        <p>Secara filosofis, Bvandia mencerminkan semangat “melampaui ide” (beyond idea) sebuah dorongan untuk tidak berhenti pada pemikiran yang dangkal atau tren sesaat, melainkan menyelami kedalaman makna di balik setiap pengalaman, perasaan, dan paradoks kehidupan.</p>
+        
+        <p><strong>Bvandia</strong> bagiku adalah nama bagi jiwa yang gelisah namun ingin memahami, bagi pikiran yang skeptis namun tetap percaya pada keindahan berpikir. Ia menulis bukan untuk mengabarkan kebenaran, melainkan untuk mencari kebenaran di antara kabar-kabar itu.</p>
+
+        <p>Visi dari <strong>Bvandia Science Journey</strong> adalah menghadirkan sains yang manusiawi bukan sekadar data, tapi pemahaman yang menyalakan rasa penasaran alami kita sebagai manusia.</p>
+        
+<div class="pillars-container">
+  <div class="pillar-item">
+    <i class="fa-solid fa-microscope"></i>
+    <strong>Skeptisisme Sehat</strong>
+    <span>Mempertanyakan segala hal sebelum menerimanya sebagai kebenaran.</span>
+  </div>
+  <div class="pillar-item">
+    <i class="fa-solid fa-heart-pulse"></i>
+    <strong>Sains Manusiawi</strong>
+    <span>Melihat angka dan data dengan empati dan rasa kemanusiaan.</span>
+  </div>
+  <div class="pillar-item">
+    <i class="fa-solid fa-seedling"></i>
+    <strong>Pertumbuhan Kontinu</strong>
+    <span>Belajar adalah perjalanan tanpa akhir, bukan tujuan akhir.</span>
+  </div>
+  <div class="pillar-item">
+    <i class="fa-solid fa-compass"></i>
+    <strong>Beyond Idea</strong>
+    <span>Menyelami makna terdalam di balik setiap permukaan informasi.</span>
+  </div>
+</div>
+
+<div class="signature">Bvandia.</div>
+
+        
+
+        <div class="contact">
+          Ingin berdiskusi, berbagi ide, atau memberi masukan? <br>
+          Kirim pesan ke: <strong>bimasaktiawannn@gmail.com</strong>
+        </div>
+      </div>
+
+      <aside class="about-card" aria-label="Foto Bvandia">
+        <img class="photo" src="vandia.jpg" alt="Foto Bvandia">
+        <div class="caption">
+          ‎"Tidak semua yang tampak menyelamatkan harus dikejar. Kadang yang menyelamatkan adalah berhenti, menerima, dan menjadi cukup di dalam.
+‎
+‎Sebab laut keinginan tak akan pernah kering tapi diriku bisa belajar untuk tidak tenggelam di dalamnya.”
+        
+        
+        - Bvandia <br>
+
+        </div>
+      </aside>
+    </div>
+  </main>
+
+<footer class="site-footer">
+  <p class="footer-title">Bvandia Science Journey</p>
+
+  <div class="footer-social">
+    <a href="mailto:bimasaktiawannn@gmail.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.instagram.com/bvandia" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@bvandia.science" target="blank" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/bima-saktiawan-502875352" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+
+  <p class="footer-copy">
+  · © 2026 · 
+  </p>
+</footer>
+  <script>
+      function notif(platform) {alert("kamu akan diarahkan ke " + platform);}
+  </script>
+  
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+</body>
+</html>

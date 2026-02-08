@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2EPS80RR9"></script>
+<link rel="preload" as="image" href="logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2EPS80RR9');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak | Bvandia Science Journey</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #222;
+      --dark: #0a0a0a;
+      --accent: #f2a900;
+    }
+
+    body {  
+      font-family: 'Georgia', serif;  
+      margin: 0;  
+      padding: 0;  
+      background-color: var(--bg);  
+      color: var(--text);  
+      line-height: 1.6;  
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }  
+
+    /* ===== Header ===== */
+.logo-title-wrapper {
+  display: flex;
+  flex-direction: column; /* Logo di atas teks (Gaya Modern) */
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Jarak antara logo dan teks */
+}
+
+.header-logo {
+  width: 60px; /* Ukuran logo di HP, sesuaikan jika kurang besar */
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(242, 169, 0, 0.4)); /* Efek cahaya di sekitar logo */
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+/* Jika ingin logo di samping teks pada layar yang agak lebar */
+@media (min-width: 768px) {
+  .logo-title-wrapper {
+    flex-direction: row; /* Berjejer ke samping */
+    gap: 20px;
+  }
+}
+
+/* Animasi halus untuk logo */
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+
+header {  
+  background-color: var(--dark);  
+  padding: 1.5rem 1rem; 
+  text-align: center;
+  border-bottom: 1px solid rgba(242, 169, 0, 0.2); /* Warna emas samar */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow agar lebih depth */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+
+header h1 {
+  margin: 0;
+  /* Menggunakan font Montserrat yang super tebal */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem; /* Ukuran sedikit naik agar gagah */
+  font-weight: 900; /* Ketebalan maksimal */
+  letter-spacing: -1px; /* Jarak antar huruf dirapatkan agar terlihat lebih solid/keren */
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  line-height: 1.1;
+  
+  /* Animasi Kilau Gradien tetap dipertahankan */
+  background: linear-gradient(
+    to right, 
+    #ffffff 20%, 
+    var(--accent) 40%, 
+    var(--accent) 60%, 
+    #ffffff 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+  
+  /* Tambahan: Shadow halus agar teks lebih "keluar" */
+  text-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Penyesuaian untuk HP Layar Kecil */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* Dekorasi Sains Minimalis */
+.science-icon {
+  position: absolute;
+  color: rgba(242, 169, 0, 0.5); /* Sangat samar agar estetik */
+  font-size: 1.5rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.science-icon:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.science-icon:nth-child(2) { top: 15%; right: 7%; animation-delay: 2s; }
+.science-icon:nth-child(3) { bottom: 10%; left: 8%; animation-delay: 4s; font-size: 2rem; }
+.science-icon:nth-child(4) { bottom: 15%; right: 5%; animation-delay: 4s; font-size: 1rem; }
+
+header:hover .science-icon {
+  color: var(--accent); /* Ikon berubah jadi emas terang saat header di-hover */
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(15deg); }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 400px) {
+  header h1 { font-size: 1.4rem; letter-spacing: 2px; }
+}
+
+
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 400px) {
+  header h1 { font-size: 1.4rem; letter-spacing: 2px; }
+}
+
+    /* ===== Nav ===== */
+    nav {  
+      display: flex;  
+      justify-content: center;  
+      background-color: #1a1a1a;  
+      padding: 0.5rem 0;  
+      gap: 18px;
+    }  
+
+    nav a {  
+      color: white;  
+      text-decoration: none;  
+      font-weight: 600;  
+      font-size: 0.98rem;  
+      transition: color 0.3s ease;  
+    }  
+
+    nav a:hover {  
+      color: var(--accent);
+      text-decoration: underline;
+    }  
+
+    nav a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 3px;
+    }  
+    /* 🔹 Container utama */
+    .contact-container {
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      color: #222;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #222;
+      border: 1px solid #ddd;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      background: #fafafa;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background-color: #f2a900;
+      color: white;
+      border-color: #f2a900;
+    }
+
+    .google-form {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .google-form a {
+      display: inline-block;
+      background-color: #f2a900;
+      color: white;
+      padding: 0.9rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .google-form a:hover {
+      background-color: #d28a00;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #111;
+      color: #aaa;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.85rem;
+    }
+    
+.site-footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  margin-top: 3rem;
+}
+
+.site-footer {
+  padding: 1.1rem 1rem;
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-social {
+  margin-bottom: 1.2rem;
+}
+
+.footer-social a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-social a {
+  color: #aaa;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f2a900;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+    @media (max-width: 600px) {
+      .contact-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>  
+  <div class="header-decoration">
+    <i class="fas fa-atom science-icon"></i>
+    <i class="fas fa-dna science-icon"></i>
+    <i class="fas fa-microscope science-icon"></i>
+    <i class="fas fa-rocket science-icon"></i>
+
+  </div>
+  
+  <div class="header-content">
+    <div class="logo-title-wrapper">
+      <img src="logo.svg" alt="Logo Bvandia" class="header-logo">
+      <h1>Bvandia Science Journey</h1>  
+    </div>
+  </div>
+</header>
+
+  <nav>
+    <a href="index.html"><strong>Home</strong></a>
+    <a href="artikel.html"><strong>Artikel</strong></a>
+    <a href="about.html"><strong>About</strong></a>
+    <a href="kontak.html" class="active"><strong>Kontak</strong></a>
+  </nav>
+
+  <section class="contact-container">
+    <h2>Hubungi Saya</h2>
+
+    <div class="social-links">
+      <a href="mailto:bimasaktiawannn@gmail.com"> <i class="fas fa-envelope"></i> Gmail</a>
+      <a href="https://www.instagram.com/bvandia?igsh=YXVvZHVkZTUzOTEx" target="_blank"
+      onclick="notif('Instagram')">
+          <i class="fab fa-instagram"></i>  Instagram </a>
+      <a href="https://www.tiktok.com/@bvandia.science" target="_blank"> <i class="fab fa-tiktok"></i>  TikTok</a>
+      <a href="https://www.linkedin.com/in/bima-saktiawan-502875352?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"> <i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+
+    </div>
+  </section>
+
+<footer class="site-footer">
+  <p class="footer-title">Bvandia Science Journey</p>
+
+  <div class="footer-social">
+    <a href="mailto:bimasaktiawannn@gmail.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.instagram.com/bvandia" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@bvandia.science" target="blank" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/bima-saktiawan-502875352" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+
+  <p class="footer-copy">
+  · © 2026 · 
+  </p>
+</footer>
+  <script>
+      function notif(platform) {alert("kamu akan diarahkan ke " + platform);}
+  </script>
+      <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+</body>
+</html>

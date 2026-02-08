@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysisparalysis | Bvandia Science Journey</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+      
+      <!-- Open Graph: Artikel -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Bvandia Science Journey">
+
+<meta property="og:title" content="Senin Pagi Kesekian">
+<meta property="og:description" content="Ketika terlalu banyak berpikir justru membuat kita diam. Sebuah refleksi psikologis tentang ragu, takut salah, dan keberanian untuk melangkah.">
+<meta property="og:url" content="https://bvandiajurney.netlify.app/seninpagikesekian">
+<meta property="og:image" content="https://bvandiajurney.netlify.app/images/seninkesekian.jpg">
+
+          <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2EPS80RR9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2EPS80RR9');
+</script>
+      
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #222;
+      --dark: #0a0a0a;
+      --accent: #f2a900;
+    }
+
+    body {  
+      font-family: 'Georgia', serif;  
+      margin: 0;  
+      padding: 0;  
+      background-color: var(--bg);  
+      color: var(--text);  
+      line-height: 1.6;  
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }  
+    /* ===== Header ===== */
+.logo-title-wrapper {
+  display: flex;
+  flex-direction: column; /* Logo di atas teks (Gaya Modern) */
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Jarak antara logo dan teks */
+}
+
+.header-logo {
+  width: 60px; /* Ukuran logo di HP, sesuaikan jika kurang besar */
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(242, 169, 0, 0.4)); /* Efek cahaya di sekitar logo */
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+/* Jika ingin logo di samping teks pada layar yang agak lebar */
+@media (min-width: 768px) {
+  .logo-title-wrapper {
+    flex-direction: row; /* Berjejer ke samping */
+    gap: 20px;
+  }
+}
+
+/* Animasi halus untuk logo */
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+
+header {  
+  background-color: var(--dark);  
+  padding: 1.5rem 1rem; 
+  text-align: center;
+  border-bottom: 1px solid rgba(242, 169, 0, 0.2); /* Warna emas samar */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow agar lebih depth */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+
+header h1 {
+  margin: 0;
+  /* Menggunakan font Montserrat yang super tebal */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem; /* Ukuran sedikit naik agar gagah */
+  font-weight: 900; /* Ketebalan maksimal */
+  letter-spacing: -1px; /* Jarak antar huruf dirapatkan agar terlihat lebih solid/keren */
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  line-height: 1.1;
+  
+  /* Animasi Kilau Gradien tetap dipertahankan */
+  background: linear-gradient(
+    to right, 
+    #ffffff 20%, 
+    var(--accent) 40%, 
+    var(--accent) 60%, 
+    #ffffff 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+  
+  /* Tambahan: Shadow halus agar teks lebih "keluar" */
+  text-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Penyesuaian untuk HP Layar Kecil */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* Dekorasi Sains Minimalis */
+.science-icon {
+  position: absolute;
+  color: rgba(242, 169, 0, 0.5); /* Sangat samar agar estetik */
+  font-size: 1.5rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.science-icon:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.science-icon:nth-child(2) { top: 15%; right: 7%; animation-delay: 2s; }
+.science-icon:nth-child(3) { bottom: 10%; left: 8%; animation-delay: 4s; font-size: 2rem; }
+.science-icon:nth-child(4) { bottom: 15%; right: 5%; animation-delay: 4s; font-size: 1rem; }
+
+header:hover .science-icon {
+  color: var(--accent); /* Ikon berubah jadi emas terang saat header di-hover */
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(15deg); }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 400px) {
+  header h1 { font-size: 1.4rem; letter-spacing: 2px; }
+}
+
+
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 400px) {
+  header h1 { font-size: 1.4rem; letter-spacing: 2px; }
+}
+
+
+    /* ===== Nav ===== */
+    nav {  
+      display: flex;  
+      justify-content: center;  
+      background-color: #1a1a1a;  
+      padding: 0.5rem 0;  
+      gap: 18px;
+    }
+    
+section p {
+  margin-bottom: 1.6em;
+}
+
+section img {
+  margin: 1.4em 0;
+}
+
+    nav a {  
+      color: white;  
+      text-decoration: none;  
+      font-weight: 600;  
+      font-size: 0.98rem;  
+      transition: color 0.3s ease;  
+    }  
+
+    nav a:hover {  
+      color: var(--accent);
+      text-decoration: underline;
+    }  
+
+    nav a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 3px;
+    }  
+
+    .article-container {
+      max-width: 860px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      animation: fadeInArticle 1s ease-out;
+    }
+
+    @keyframes fadeInArticle {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-image {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .article-header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .article-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+      line-height: 1.3;
+    }
+
+    .article-date {
+      color: #888;
+      font-size: 0.85rem;
+      margin-bottom: 1.2rem;
+    }
+    
+.reading-time {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+  margin-bottom: 1.8rem;
+  font-style: italic;
+}
+
+.reading-time i {
+  margin-right: 6px;
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* --- Bagian yang Diperbarui --- */
+
+/* 1. Efek Drop Cap (Huruf Besar di Awal) */
+.article-content p:first-of-type::first-letter {
+  font-family: 'Montserrat', sans-serif;
+  float: left;
+  font-size: 4rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+  color: var(--accent);
+  font-weight: 900;
+}
+
+/* 2. Style Quote yang Lebih Elegan */
+blockquote {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #444;
+  border-left: 5px solid var(--accent);
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0 !important; /* Gunakan important agar menimpa style inline jika ada */
+  background: rgba(242, 169, 0, 0.05); 
+  position: relative;
+  border-radius: 0 10px 10px 0;
+}
+
+blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 5rem;
+  color: rgba(242, 169, 0, 0.1);
+  font-family: serif;
+}
+
+/* 3. Penekanan pada Subjudul (H3) */
+.article-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-top: 3rem;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.article-content h3::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: var(--accent);
+  display: inline-block;
+  border-radius: 2px;
+}
+
+    .article-illustration {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .article-illustration:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+    .caption {
+      text-align: center;
+      color: #666;
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 2rem 0 1rem 2rem;
+      color: #f2a900;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: #d28a00;
+    }
+    
+    .share-box {
+  max-width: 700px;
+  margin: 3rem auto 2rem;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.share-text {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+#share-btn {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+#share-btn i {
+  margin-right: 6px;
+}
+
+#share-btn:hover {
+  background-color: #f2a900;
+  border-color: #f2a900;
+  color: #fff;
+}
+
+.reader-response {
+  text-align: center;
+  margin: 4rem auto;
+  padding: 2rem;
+  max-width: 520px;
+}
+
+.response-question {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.response-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.response-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.response-btn span {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  color: #444;
+}
+
+.response-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.response-btn i {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.response-btn:hover i {
+  transform: scale(1.2);
+}
+
+.response-btn.active i {
+  transform: scale(1.35);
+}
+
+.response-btn.active {
+  background: #f2a900;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+  transform: scale(1.12);
+}
+
+.response-btn.disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.response-thankyou {
+  margin-top: 1.8rem;
+  font-style: italic;
+  color: #666;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.response-thankyou.show {
+  opacity: 1;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 4rem auto 2rem;
+  max-width: 700px;
+}
+
+.references {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+  color: #444;
+}
+
+.references h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #111;
+  letter-spacing: 0.3px;
+}
+
+.references ol {
+  padding-left: 1.2rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.references li {
+  margin-bottom: 0.9rem;
+}
+
+.references a {
+  color: #f2a900;
+  text-decoration: none;
+}
+
+.references a:hover {
+  text-decoration: underline;
+}
+
+
+    footer {
+      text-align: center;
+      background-color: #111;
+      color: #aaa;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.85rem;
+    }
+    
+.site-footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  margin-top: 3rem;
+}
+
+.site-footer {
+  padding: 1.1rem 1rem;
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-social {
+  margin-bottom: 1.2rem;
+}
+
+.footer-social a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-social a {
+  color: #aaa;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f2a900;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+    @media (max-width: 600px) {
+      .contact-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+    @media (max-width: 768px) {
+      .article-container {
+        max-width: 94%;
+        margin: 2rem auto;
+        padding: 0.5rem;
+      }
+
+      .article-content {
+        padding: 1.4rem 1.2rem;
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      .article-header h2 {
+        font-size: 1.5rem;
+      }
+
+      .article-illustration {
+        max-width: 100%;
+      }
+
+      .article-content p {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .article-header h2 {
+        font-size: 1.3rem;
+      }
+
+      .article-content {
+        padding: 1.2rem 1rem;
+        font-size: 0.96rem;
+      }
+
+      .article-container {
+        border-radius: 8px;
+      }
+    }
+    
+.article-content p {
+  font-size: 1.15rem; 
+  line-height: 1.8;   
+  color: #333; 
+  margin-bottom: 1.6rem; 
+  text-align: left;   
+}
+
+@media (max-width: 768px) {
+  .article-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+}
+    
+        /* Reading progress bar */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background-color: #f2a900;
+  z-index: 9999;
+}
+  </style>
+</head>
+
+<body>
+    <div id="reading-progress"></div>
+<header>  
+  <div class="header-decoration">
+    <i class="fas fa-atom science-icon"></i>
+    <i class="fas fa-dna science-icon"></i>
+    <i class="fas fa-microscope science-icon"></i>
+    <i class="fas fa-rocket science-icon"></i>
+
+  </div>
+  
+  <div class="header-content">
+    <div class="logo-title-wrapper">
+      <img src="logo.svg" alt="Logo Bvandia" class="header-logo">
+      <h1>Bvandia Science Journey</h1>  
+    </div>
+  </div>
+</header>
+
+  <nav>
+    <a href="index.html"><strong>Home</strong></a>
+    <a href="artikel.html" class="active"><strong>Artikel</strong></a>
+    <a href="about.html"><strong>About</strong></a>
+    <a href="kontak.html"><strong>Kontak</strong></a>
+  </nav>
+
+  <section class="article-container">
+    <img src="seninpagikesekian.jpg" alt="Makna Hidup" class="article-image">
+    <div class="article-header">
+      <h2>Senin Pagi Kesekian</h2>
+      <div class="article-date">Ditulis pada 1 Januari 2026</div>
+    </div>
+    
+    <p class="reading-time">
+  <i class="fa-solid fa-stopwatch"></i>
+  <span id="reading-time"></span> menit membaca
+</p>
+
+    <div class="article-content">
+      <p>Senin pagi itu berjalan seperti biasa. Upacara bendera, amanat panjang, dan sengatan matahari yang mulai membakar kulit. Di tengah keriuhan itu, seorang teman jatuh pingsan karena kelelahan. Aku tersentak, refleks memanggil tim PMR karena bingung harus berbuat apa. Namun, setelah tandu dibawa pergi dan suasana kembali tenang, fokus semua orang  (termasuk aku) kembali tersedot pada suara pembicara di depan. <em> That’s it.</em> Hidup seolah langsung berlanjut tanpa jeda, seolah gangguan kecil tadi hanyalah <em>glitch</em> singkat dalam sistem.</p>
+      
+      <p>Di bawah kanopi langit yang mulai memucat karena terik, suara Pak Fauzi mulai meresap ke kepalaku, berat dan berdengung seperti suara lebah di tengah keheningan. Ia bicara tentang <em>kesadaran, makna,</em> dan <em>tujuan hidup.</em> Sebuah topik yang terasa terlalu raksasa untuk dipikul oleh bahu yang sudah kepanasan. Kalimat-kalimatnya tajam, menyindir bagaimana kita seringkali terjebak dalam 'mode otomatis'.</p>
+      
+      <p>Aku tertegun. Bayangan tentang siklus hidupku sendiri mendadak terputar di kepala: bangun saat alarm memekik, menyeret tubuh ke sekolah, tenggelam dalam riuh rendah ruang kelas, lalu tumbang di tempat tidur hanya untuk mengulanginya lagi esok hari. Sebuah roda hamster tanpa henti. Kita bergerak bukan karena memiliki kompas, melainkan karena didorong oleh ekspektasi bahwa 'memang seharusnya begitu'.</p>
+      
+      
+      
+    <p>Kalimat Pak Fauzi itu menggantung di udara yang panas, beradu dengan dengung bisikan orang sekitar dan peluh yang mulai menetes di pelipisku. Aku terdiam, menyadari betapa hampa dan tanpa tujuannya langkah-langkah yang kuambil selama ini. Aku mulai bertanya-tanya: dalam rutinitas yang sedemikian mekanis ini, di mana aku menyimpan 'mengapa'-ku? Atau jangan-jangan, aku memang sudah lama kehilangan maknanya dan hanya sedang berpura-pura hidup. Kalau begitu berarti sia-sia aku mencari makna sejauh ini, namun yang kutemukan hanyalah kabut.</p>
+    
+    
+    <p>Di tengah pergulatan batin itu, mataku yang lelah tanpa sengaja tertambat pada sesosok pria di pinggir lapangan. Dia adalah staf TU baru, seorang bapak-bapak paruh baya yang berdiri tegak dengan kemeja rapi yang tampak kaku. Sosoknya begitu tenang, hampir terlalu tenang di tengah hiruk-pikuk siswa yang mulai gelisah karena panas. Di mataku, dia layaknya seorang 'NPC', tokoh latar dalam sebuah video game yang kehadirannya hanya untuk melengkapi dekorasi sekolah. Ia nyaris tak terlihat, tak bersuara, dan tak memiliki peran besar dalam drama remaja kami. Pikiranku mulai meliar, menyusun fragmen-fragmen hidupnya yang mungkin membosankan: bunyi mesin cetak yang monoton, tumpukan map administrasi yang berdebu, dan perjalanan pulang sore hari menuju rumah yang sama, untuk mengulang ritual yang sama esok pagi.</p>
+      
+      <p>Muncul sebuah pertanyaan sinis di kepalaku: <strong>Apakah ia masih memiliki tujuan dan harapan untuk dirinya sendiri?</strong></p>
+      
+      <p>Aku melihatnya sebagai sosok yang "terlilit sistem". Dalam benakku, bapak-bapak yang sudah berumur dan berkeluarga sepertinya hanya bergerak demi gaji dan kebutuhan keluarga. Mereka seolah sudah selesai dengan diri mereka sendiri. Mirip seperti Ayahku. Saat bercerita, Ayah seringkali bersikap seolah mimpinya sudah mati karena merasa telah gagal di masa lalu. Baginya, harapan bukan lagi milik pribadinya, melainkan telah dipindahkan seluruhnya ke pundak anak-anaknya agar hidup lebih layak.</p>
+      
+      <p>Tiba-tiba, rasa ketakutan menghujamku. Aku takut suatu hari nanti hidupku akan berjalan di rel yang sama. Aku takut menjadi “biasa”, takut kehilangan mimpi, dan takut hidupku menyempit hanya menjadi deretan kewajiban. Dalam kepalaku, hidup tanpa pencapaian besar terasa seperti kegagalan total. </p>
+      
+      <p>Nafasku terasa berat, seolah udara Senin pagi ini mendadak terlalu padat untuk dihirup. Namun, saat mataku kembali tertuju pada punggung tegap bapak staf TU di ujung lapangan, sebuah memori tentang bacaan lama melintas. Aku teringat <em>Viktor Frankl.</em>  Seorang penyintas Holocaust yang melihat makna justru di tengah kesempitan yang paling ekstrem. Perlahan, sudut pandangku mulai bergeser.</p>
+      
+      <p>Dia pernah menulis bahwa manusia seringkali mengalami <em>existential vacuum</em> kehampaan karena merasa hidupnya tidak bermakna. Aku sadar, ketakutanku menjadi "biasa saja" sebenarnya adalah bentuk dari kehampaan itu. Aku terlalu sibuk mendewakan "keistimewaan" diri.</p>
+      
+      <p>Rasa sinisku pada bapak staf TU itu tiba-tiba berbalik menghantamku. Siapa aku hingga berani melabeli hidup orang lain sebagai 'glitch' atau 'tokoh latar'? Di tengah kepungan rasa takut akan menjadi biasa saja, aku tersadar bahwa mungkin aku sedang mengalami apa yang disebut Frankl sebagai <em>existential vacuum.</em></p>
+      
+      <p>Frankl mengajarkan bahwa makna hidup itu tidak selalu tentang ambisi besar. Ia bisa ditemukan dalam tiga hal: karya, cinta, dan  <strong>sikap dalam penderitaan.</strong> Aku menyadari sesuatu yang tidak nyaman: selama ini cara pandangku sangat ego-sentris. Aku memuja mimpi pribadi dan kebebasan, tanpa memahami beratnya sebuah tanggung jawab. Frankl pernah berujar..</p>
+      
+            <blockquote style="article-quote">
+        "Kebebasan berada dalam bahaya jika ia merosot menjadi sekadar kesewenang-wenangan, kecuali jika ia dijalankan dengan penuh tanggung jawab." — Viktor E. Frankl
+      </blockquote>
+      
+      <p>Aku belum pernah menjadi seorang ayah yang harus menekan egonya demi susu anaknya. Aku belum pernah berada di posisi di mana kegagalan bukan lagi tentang diriku sendiri, melainkan tentang orang-orang yang bergantung padaku. Aku masih memiliki kemewahan untuk bertanya dan meragu, sementara bagi bapak staf TU atau Ayahku, makna hidup mereka mungkin justru ditemukan dalam tanggung jawab itu sendiri, sebuah bentuk "kebebasan terakhir" untuk memilih bersikap setia pada kewajiban meski keadaan terasa monoton.</p>
+      
+      <p>Mungkin bapak staf TU itu bukan "NPC". Mungkin dia adalah pahlawan dalam narasinya sendiri, yang menemukan makna bukan dari apa yang dia lakukan, tapi dari untuk siapa dia melakukannya. Aku menghakimi hidup yang monoton, padahal aku sendiri belum tentu sanggup memberi makna saat pilihan-pilihan hidupku menyempit nantinya. Aku takut kehilangan makna, namun belum benar-benar membuktikan bahwa hidupku saat ini sudah bermakna.</p>
+      
+      <p>Kini aku sadar, bukan kita yang seharusnya bertanya apa makna hidup ini. Melainkan, hiduplah yang setiap hari bertanya kepada kita: "Apa yang akan kamu lakukan dengan peranmu hari ini?" Dan tugas kita adalah menjawabnya dengan tindakan yang bertanggung jawab, sekecil apa pun itu.</p>
+      
+      <center>---</center>
+      
+      <p>"Barisan dibubarkan!" seru pemimpin upacara.</p>
+      
+      <p>Suara derap sepatu dan riuh obrolan teman-teman seketika memecah kesunyian lapangan. Aku berdiri diam sejenak, membiarkan arus siswa melewatiku. Di kejauhan, kulihat bapak staf TU itu mulai melangkah tenang menuju ruangannya dengan langkah yang stabil, tidak terburu-buru, seolah setiap pijakannya adalah sebuah penerimaan yang tulus atas takdirnya hari ini.</p>
+      
+      <p>Aku tidak lagi melihatnya sebagai tokoh latar yang membosankan. Kini, aku melihat seorang pria yang mungkin telah memenangkan pertarungan melawan egonya sendiri demi sesuatu yang lebih besar dari sekadar "menjadi istimewa". Aku menarik napas panjang, membiarkan udara panas Senin pagi itu memenuhi paru-paruku. Ketakutanku belum sepenuhnya hilang, namun kini ia terasa lebih ringan.</p>
+      
+      <p>Sembari berjalan menuju kelas, aku menyadari satu hal: mungkin makna hidupku tidak akan ditemukan dalam kemewahan dan gelamornya dunia. Ia justru berada saat aku memilih untuk tetap bertahan dan memeluk tanggung jawabku sebagai manusia. Entah beban seperti apa yang akan hinggap di pundakku nanti, aku hanya ingin menjalankan peran itu dengan lapang dada dan sebagaimana peranku. Seperti Ayah, dan seperti bapak staf TU itu.</p>
+      
+      <p>Meski hidup mungkin akan membatasi pilihanku, ia tidak akan pernah bisa merampas kebebasan terakhirku. Seperti yang dikatakan <em>Viktor Frankl</em>: <mark>'Segala sesuatu bisa dirampas dari manusia, kecuali satu hal: kebebasan terakhir manusia—yaitu memilih sikap dalam setiap keadaan.'</mark> Dan hari ini, aku memilih untuk tetap tegar menghadapi setiap kenyataan dunia.</p>
+  </section>
+  
+  
+  <hr class="divider">
+
+<section class="references">
+  <h3>Daftar Bacaan</h3>
+
+  <ol>
+    <li>
+      <strong>Viktor E. Frankl.</strong> (2017). 
+      <em>Man's Search for Meaning</em>. Noura Books (Edisi Bahasa Indonesia).
+    </li>
+
+  </ol>
+</section>
+  
+  <div class="share-box">
+  <p class="share-text">Share tulisan ini jika kalian merasa ini bermanfaat!</p>
+
+  <button id="share-btn">
+    <i class="fa-solid fa-share-nodes"></i> Bagikan
+  </button>
+</div>
+
+<div class="response-options">
+  <button class="response-btn" data-response="puas">
+    <i class="fa-solid fa-fire"></i>
+    <span>Menyala</span>
+  </button>
+
+  <button class="response-btn" data-response="netral">
+    <i class="fa-regular fa-face-smile"></i>
+    <span>Cukup</span>
+  </button>
+
+  <button class="response-btn" data-response="kurang">
+    <i class="fa-regular fa-face-meh"></i>
+    <span>Kurang</span>
+  </button>
+</div>
+
+<form
+  id="responseForm"
+  action="https://formspree.io/f/xzdppvnw"
+  method="POST"
+  style="display:none;"
+>
+  <input type="hidden" name="article_title" id="articleInput">
+  <input type="hidden" name="reader_response" id="responseInput">
+  <input type="hidden" name="page_url" id="urlInput">
+</form>
+
+  <a href="artikel.html" class="back-btn">← Kembali ke daftar artikel</a>
+
+<footer class="site-footer">
+  <p class="footer-title">Bvandia Science Journey</p>
+
+  <div class="footer-social">
+    <a href="mailto:bimasaktiawannn@gmail.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.instagram.com/bvandia" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@bvandia.science" target="blank" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/bima-saktiawan-502875352" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+
+  <p class="footer-copy">
+  · © 2026 · 
+  </p>
+</footer>
+  <script>
+      function notif(platform) {alert("kamu akan diarahkan ke " + platform);}
+  </script>
+  <script>
+  window.addEventListener('scroll', () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("reading-progress").style.width = scrolled + "%";
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article-content");
+
+    if (!article) return;
+
+    const text = article.innerText;
+    const words = text.trim().split(/\s+/).length;
+    const wordsPerMinute = 200;
+    const readingTime = Math.ceil(words / wordsPerMinute);
+
+    document.getElementById("reading-time").innerText = readingTime;
+  });
+</script>
+<script>
+  const shareBtn = document.getElementById("share-btn");
+
+  if (shareBtn) {
+    shareBtn.addEventListener("click", () => {
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          text: "Aku baru membaca tulisan ini, mungkin kamu juga tertarik.",
+          url: window.location.href
+        });
+      } else {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent("Aku baru membaca tulisan ini:");
+        window.open(`https://wa.me/?text=${text}%20${url}`, "_blank");
+      }
+    });
+  }
+</script>
+<script>
+const buttons = document.querySelectorAll('.response-btn');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const response = btn.dataset.response;
+
+    document.getElementById('articleInput').value = document.title;
+    document.getElementById('responseInput').value = response;
+    document.getElementById('urlInput').value = window.location.href;
+
+    fetch("https://formspree.io/f/xzdppvnw", {
+      method: "POST",
+      body: new FormData(document.getElementById("responseForm")),
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    lockResponse(response);
+  });
+});
+
+function lockResponse(selected) {
+  buttons.forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.response === selected);
+    btn.classList.toggle("disabled", btn.dataset.response !== selected);
+  });
+}
+
+      <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+</body>
+</html>

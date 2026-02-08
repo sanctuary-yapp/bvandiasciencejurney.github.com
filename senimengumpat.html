@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seni Mengumpat | Bvandia Science Journey</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+      
+      <!-- Open Graph: Artikel -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Bvandia Science Journey">
+
+<meta property="og:title" content="Seni Mengumpat: Mengapa Kita Memaki? Mengapa Makian Justru Menjadi Perekat Persahabatan?">
+<meta property="og:description" content="Pernahkah kamu merasa lega setelah mengumpat? Ternyata, kata kasar bukan sekadar sampah bahasa. Dari ledakan hormon di otak hingga simbol solidaritas, mari bedah anatomi di balik 'pedasnya' lidah kita lewat sudut pandang psikologi dan sosiologi.">
+<meta property="og:url" content="https://bvandiajurney.netlify.app/senimengumpat">
+<meta property="og:image" content="https://bvandiajurney.netlify.app/images/analysisparalysis.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Seni Mengumpat: Mengapa Kita Memaki? Mengapa Makian Justru Menjadi Perekat Persahabatan?">
+<meta name="twitter:description" content="Pernahkah kamu merasa lega setelah mengumpat? Ternyata, kata kasar bukan sekadar sampah bahasa. Dari ledakan hormon di otak hingga simbol solidaritas, mari bedah anatomi di balik 'pedasnya' lidah kita lewat sudut pandang psikologi dan sosiologi.">
+<meta name="twitter:image" content="https://bvandiajurney.netlify.app/images/analysisparalysis.jpg">
+      
+          <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2EPS80RR9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2EPS80RR9');
+</script>
+      
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #222;
+      --dark: #0a0a0a;
+      --accent: #f2a900;
+    }
+
+    body {  
+      font-family: 'Georgia', serif;  
+      margin: 0;  
+      padding: 0;  
+      background-color: var(--bg);  
+      color: var(--text);  
+      line-height: 1.6;  
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }  
+
+.logo-title-wrapper {
+  display: flex;
+  flex-direction: column; /* Logo di atas teks (Gaya Modern) */
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Jarak antara logo dan teks */
+}
+
+.header-logo {
+  width: 60px; /* Ukuran logo di HP, sesuaikan jika kurang besar */
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(242, 169, 0, 0.4)); /* Efek cahaya di sekitar logo */
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+/* Jika ingin logo di samping teks pada layar yang agak lebar */
+@media (min-width: 768px) {
+  .logo-title-wrapper {
+    flex-direction: row; /* Berjejer ke samping */
+    gap: 20px;
+  }
+}
+
+/* Animasi halus untuk logo */
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+
+header {  
+  background-color: var(--dark);  
+  padding: 1.5rem 1rem; 
+  text-align: center;
+  border-bottom: 1px solid rgba(242, 169, 0, 0.2); /* Warna emas samar */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow agar lebih depth */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+
+header h1 {
+  margin: 0;
+  /* Menggunakan font Montserrat yang super tebal */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem; /* Ukuran sedikit naik agar gagah */
+  font-weight: 900; /* Ketebalan maksimal */
+  letter-spacing: -1px; /* Jarak antar huruf dirapatkan agar terlihat lebih solid/keren */
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  line-height: 1.1;
+  
+  /* Animasi Kilau Gradien tetap dipertahankan */
+  background: linear-gradient(
+    to right, 
+    #ffffff 20%, 
+    var(--accent) 40%, 
+    var(--accent) 60%, 
+    #ffffff 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+  
+  /* Tambahan: Shadow halus agar teks lebih "keluar" */
+  text-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Penyesuaian untuk HP Layar Kecil */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* Dekorasi Sains Minimalis */
+.science-icon {
+  position: absolute;
+  color: rgba(242, 169, 0, 0.5); /* Sangat samar agar estetik */
+  font-size: 1.5rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.science-icon:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.science-icon:nth-child(2) { top: 15%; right: 7%; animation-delay: 2s; }
+.science-icon:nth-child(3) { bottom: 10%; left: 8%; animation-delay: 4s; font-size: 2rem; }
+.science-icon:nth-child(4) { bottom: 15%; right: 5%; animation-delay: 4s; font-size: 1rem; }
+
+header:hover .science-icon {
+  color: var(--accent); /* Ikon berubah jadi emas terang saat header di-hover */
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(15deg); }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 400px) {
+  header h1 { font-size: 1.4rem; letter-spacing: 2px; }
+}
+
+    /* ===== Nav ===== */
+    nav {  
+      display: flex;  
+      justify-content: center;  
+      background-color: #1a1a1a;  
+      padding: 0.5rem 0;  
+      gap: 18px;
+    }
+    
+section p {
+  margin-bottom: 1.6em;
+}
+
+section img {
+  margin: 1.4em 0;
+}
+
+    nav a {  
+      color: white;  
+      text-decoration: none;  
+      font-weight: 600;  
+      font-size: 0.98rem;  
+      transition: color 0.3s ease;  
+    }  
+
+    nav a:hover {  
+      color: var(--accent);
+      text-decoration: underline;
+    }  
+
+    nav a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 3px;
+    }  
+
+    .article-container {
+      max-width: 860px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      animation: fadeInArticle 1s ease-out;
+    }
+
+    @keyframes fadeInArticle {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-image {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .article-header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .article-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+      line-height: 1.3;
+    }
+
+    .article-date {
+      color: #888;
+      font-size: 0.85rem;
+      margin-bottom: 1.2rem;
+    }
+    
+.reading-time {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+  margin-bottom: 1.8rem;
+  font-style: italic;
+}
+
+.reading-time i {
+  margin-right: 6px;
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* --- Bagian yang Diperbarui --- */
+
+/* 1. Efek Drop Cap (Huruf Besar di Awal) */
+.article-content p:first-of-type::first-letter {
+  font-family: 'Montserrat', sans-serif;
+  float: left;
+  font-size: 4rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+  color: var(--accent);
+  font-weight: 900;
+}
+
+/* 2. Style Quote yang Lebih Elegan */
+blockquote {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #444;
+  border-left: 5px solid var(--accent);
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0 !important; /* Gunakan important agar menimpa style inline jika ada */
+  background: rgba(242, 169, 0, 0.05); 
+  position: relative;
+  border-radius: 0 10px 10px 0;
+}
+
+blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 5rem;
+  color: rgba(242, 169, 0, 0.1);
+  font-family: serif;
+}
+
+/* 3. Penekanan pada Subjudul (H3) */
+.article-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-top: 3rem;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.article-content h3::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: var(--accent);
+  display: inline-block;
+  border-radius: 2px;
+}
+
+    .article-illustration {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .article-illustration:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+    .caption {
+      text-align: center;
+      color: #666;
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 2rem 0 1rem 2rem;
+      color: #f2a900;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: #d28a00;
+    }
+    
+    .share-box {
+  max-width: 700px;
+  margin: 3rem auto 2rem;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.share-text {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+#share-btn {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+#share-btn i {
+  margin-right: 6px;
+}
+
+#share-btn:hover {
+  background-color: #f2a900;
+  border-color: #f2a900;
+  color: #fff;
+}
+
+.reader-response {
+  text-align: center;
+  margin: 4rem auto;
+  padding: 2rem;
+  max-width: 520px;
+}
+
+.response-question {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.response-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.response-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.response-btn span {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  color: #444;
+}
+
+.response-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.response-btn i {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.response-btn:hover i {
+  transform: scale(1.2);
+}
+
+.response-btn.active i {
+  transform: scale(1.35);
+}
+
+.response-btn.active {
+  background: #f2a900;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+  transform: scale(1.12);
+}
+
+.response-btn.disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.response-thankyou {
+  margin-top: 1.8rem;
+  font-style: italic;
+  color: #666;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.response-thankyou.show {
+  opacity: 1;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 4rem auto 2rem;
+  max-width: 700px;
+}
+
+.references {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+  color: #444;
+}
+
+.references h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #111;
+  letter-spacing: 0.3px;
+}
+
+.references ol {
+  padding-left: 1.2rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.references li {
+  margin-bottom: 0.9rem;
+}
+
+.references a {
+  color: #f2a900;
+  text-decoration: none;
+}
+
+.references a:hover {
+  text-decoration: underline;
+}
+
+
+    footer {
+      text-align: center;
+      background-color: #111;
+      color: #aaa;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.85rem;
+    }
+    
+.site-footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  margin-top: 3rem;
+}
+
+.site-footer {
+  padding: 1.1rem 1rem;
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-social {
+  margin-bottom: 1.2rem;
+}
+
+.footer-social a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-social a {
+  color: #aaa;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f2a900;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+    @media (max-width: 600px) {
+      .contact-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+    @media (max-width: 768px) {
+      .article-container {
+        max-width: 94%;
+        margin: 2rem auto;
+        padding: 0.5rem;
+      }
+
+      .article-content {
+        padding: 1.4rem 1.2rem;
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      .article-header h2 {
+        font-size: 1.5rem;
+      }
+
+      .article-illustration {
+        max-width: 100%;
+      }
+
+      .article-content p {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .article-header h2 {
+        font-size: 1.3rem;
+      }
+
+      .article-content {
+        padding: 1.2rem 1rem;
+        font-size: 0.96rem;
+      }
+
+      .article-container {
+        border-radius: 8px;
+      }
+    }
+.article-content p {
+  font-size: 1.15rem; 
+  line-height: 1.8;   
+  color: #333; 
+  margin-bottom: 1.6rem; 
+  text-align: left;   
+}
+
+@media (max-width: 768px) {
+  .article-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+}
+    
+        /* Reading progress bar */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background-color: #f2a900;
+  z-index: 9999;
+}
+  </style>
+</head>
+
+<body>
+    <div id="reading-progress"></div>
+<header>  
+  <div class="header-decoration">
+    <i class="fas fa-atom science-icon"></i>
+    <i class="fas fa-dna science-icon"></i>
+    <i class="fas fa-microscope science-icon"></i>
+    <i class="fas fa-rocket science-icon"></i>
+
+  </div>
+  
+  <div class="header-content">
+    <div class="logo-title-wrapper">
+      <img src="logo.svg" alt="Logo Bvandia" class="header-logo">
+      <h1>Bvandia Science Journey</h1>  
+    </div>
+  </div>
+</header>
+
+  <nav>
+    <a href="index.html"><strong>Home</strong></a>
+    <a href="artikel.html" class="active"><strong>Artikel</strong></a>
+    <a href="about.html"><strong>About</strong></a>
+    <a href="kontak.html"><strong>Kontak</strong></a>
+  </nav>
+
+  <section class="article-container">
+    <img src="linguistik.jpg" alt="Kasar Abies" class="article-image">
+    <div class="article-header">
+      <h2>Seni Mengumpat: Mengapa Kita Memaki? Mengapa Makian Justru Menjadi Perekat Persahabatan?</h2>
+      <div class="article-date">Ditulis pada 19 Desember 2025</div>
+    </div>
+    
+    <p class="reading-time">
+  <i class="fa-solid fa-stopwatch"></i>
+  <span id="reading-time"></span> menit membaca
+</p>
+
+    <div class="article-content">
+      <p>Pernah gak sih kalian menyadari bahwa kata-kata paling kasar dalam kamusmu justru keluar di saat-saat paling jujur? Entah itu saat kita merasa hancur karena kecewa, melompat kegirangan karena euforia, atau sekadar kaget karena hal sepele. Tanpa diundang, kata-kata seperti <em>anjay, anjir,</em> atau <em>babi</em> meluncur begitu saja. Anehnya, ada rasa lega yang tersalurkan, sebuah sensasi puas yang tak bisa digantikan oleh kata-kata santun mana pun. Fenomena ini membuatku bertanya-tanya: <strong>Apakah ini hanya sekadar kebiasaan buruk, atau ada sesuatu yang lebih dalam di balik 'pedasnya' lidah kita?</strong></p>
+     
+      <p>Kalau di perhatikan, ini bukan hanya terjadi pada pribadi kita. Di lingkaran pertemanan contohnya, kata-kata kasar justru sering menjadi bagian dari percakapan sehari-hari. Misalnya, ketika mendengar sesuatu yang mengejutkan, spontan muncul kalimat <em>“anjir, serius kejadiannya kayak gitu?”</em> atau <em>"Sialann!”.</em> Reaksi itu tidak sekadar kata, tapi juga ekspresi yang mempertegas emosi. Dan seringnya, teman-teman yang mendengan umpatan seperti itu tidak merasa tersinggung. Malah, terkadang hal itu mempererat rasa kebersamaan seolah kata kasar menjadi bumbu yang membuat pertemanan terasa lebih cair dan asik, walaupun ini tidak bisa di normalisasikan begitu saja.</p>
+      
+      <p> Dan jika kalian pun sadar, bahwa kata-kata kasar itu sering sekali berganti mengikuti alur tren. Ada masanya orang lebih sering mengucapkan kata bernuansa binatang, lalu bergeser ke slang lokal, dan belakangan ini muncul adopsi dari bahasa asing atau istilah internet. Pola ini membuatku berpikir bahwa bahasa kasar bukan hanya alat ekspresi pribadi, melainkan juga dipengaruhi oleh arus budaya yang bergerak dimasyarakat. Seolah kata-kata kasar pun punya “musimnya” sendiri.</p>
+      
+      <h3>Lalu, kenapa kata-kata kasar terasa candu?</h3>
+      
+      <p>Jika kita melihat dari sudut pandang <em>psikologis,</em> sebagaimana dijelaskan oleh <em>Vingerhoets</em>, mengumpat dapat dipahami sebagai bentuk pelepasan emosi <em>(catharsis).</em> Ketika emosi memuncak baik karena marah, terkejut, frustrasi, bahkan dalam kondisi senang yang intens kata-kata kasar muncul bukan sekadar sebagai pilihan bahasa, melainkan sebagai respons emosional yang relatif spontan. Dalam proses ini, otak menilai situasi sebagai sesuatu yang menekan atau menggugah emosi, lalu memicu respons fisiologis berupa pelepasan adrenalin (hormon siaga pemicu energi dan kewaspadaan) dan endorfin (hormon bahagia pereda nyeri dan stres). Respons ini membantu meredakan ketegangan internal, sehingga setelah mengumpat seseorang sering merasakan kelegaan psikologis. Pengalaman itu juga aku rasakan secara personal: setiap kali mengumpat, ada sensasi lega dan puas yang sulit digantikan oleh kata-kata netral, seolah emosi yang menumpuk menemukan salurannya sendiri melalui bahasa.</p>
+
+      <img src="sabar.png" alt="memes" class="article-illustration">
+      <div class="caption">Source @pinterest</div>
+      
+      <p>Kemudian dari sisi <em>linguistik</em> kita bisa melihat alasan yang lebih jelas. Kata-kata kasar umumnya pendek, keras, dan dipenuhi konsonan letup seperti b, j, k, atau t. Secara fonetik, bunyi-bunyi ini terasa “meledak” di mulut, seolah lidah ikut meluapkan emosi yang menekan dada. Karena itu, saat emosi memuncak, kata kasar sering kali meluncur lebih cepat dibanding kalimat santun yang panjang dan tertata. Ini di jelaskan dalam Penelitian linguistik terbaru yang menunjukkan bahwa kata-kata kasar memang cenderung minim bunyi lembut seperti l, r, w, atau y, dan justru didominasi <em>konsonan plosif</em> (p, t, dan k) yang menghasilkan ledakan udara ketika diucapkan. Pola ini ditemukan lintas bahasa, dari Inggris hingga Korea dan Rusia bahkan Indonesia. Bunyi yang keras dan singkat membuat kata kasar terasa lebih ekspresif dan efektif sebagai pelepas emosi dibandingkan kata-kata santun yang lebih panjang dan berliku.</p>
+      
+      <p>Riset <em>Lev-Ari dan McKay</em> (2022), misalnya, menemukan bahwa kata kasar jarang mengandung bunyi <em> approximant </em> (y, w, l, & r) dan lebih sering mengandalkan plosif. Bahkan dalam eksperimen lintas budaya, penutur dari berbagai bahasa cenderung menilai kata dengan bunyi plosif sebagai “lebih mungkin” merupakan kata kasar. Temuan ini di perkuat oleh studi lain yang menunjukkan bahwa ketika kata kasar “dilunakkan” menjadi <em>minced oaths </em> seperti darn (dari "damn") atau frigging (dari "fucking"), bunyi lembut sengaja ditambahkan agar daya ledaknya berkurang.<mark><em> Minced oaths</em> ini juga terjadi dalam budaya bahasa Indonesia yang di mana serupa dengan kata anjir, bjir, atau anjay, yang dimana itu adalah hasil dari pelunakan dari kata "anjing"</mark> yang dianggap terlalu kasar untuk diucapkan, sehingga dilakukannya pelunakan atau pelesetan dengan penambahan bunyi <em>approximant</em> agar dapat sedikit lebih lembut di telinga.</p>
+      
+            <img src="bahasa.jpg" alt="linguistik" class="article-illustration">
+      <div class="caption">Source @penerbitlitnus.co.id/menggali-lebih-dalam-sosiolinguistik </div>
+      
+      <p>Dari sisi <em>sosial,</em> kata kasar tidak selalu hadir sebagai simbol pelepasan emosional semata. Dalam banyak kelompok pertemanan bisa kita lihat, umpatan justru berfungsi sebagai tanda keakraban. Kata-kata yang secara umum dianggap tabu dipakai sebagai “bahasa dalam” yang hanya dipahami oleh anggota kelompok. Jika seseorang tidak bisa menerima gaya bahasa ini, ia kerap dicap “kurang asik” atau tidak menyatu dengan lingkungan tersebut.</p>
+      
+      <p>Fenomena ini dijelaskan melalui <strong>Neutralization Theory</strong> oleh <em>Sykes dan Matza.</em> Penggunaan kata kasar dipandang sebagai mekanisme individu untuk menetralkan norma kesantunan masyarakat demi mencapai tujuan yang dianggap lebih bernilai. Melalui teknik <em>Appeal to Higher Loyalties,</em> anggota kelompok menempatkan loyalitas terhadap persahabatan dan 'kejujuran' ekspresi di atas etiket formal.</p>
+      
+      <p>Di sini, umpatan berfungsi sebagai alat penetral: muncul keyakinan bahwa perilaku tersebut tidaklah salah selama dilakukan dalam ruang intim yang tidak merugikan siapapun <em>(denial of injury).</em> Hal ini menciptakan inklusivitas eksklusif; lambaian kata kasar menjadi simbol bahwa ikatan kelompok jauh lebih kuat daripada tekanan norma eksternal.</p>
+      
+      <p>Tetapi perlu diperhatikan juga bahwasanya <strong>Neutralization Theory</strong> ini bekerja optimal jika posisi antar anggota kelompok setara. <mark>Jika ada perbedaan hierarki (misal atasan ke bawahan), penggunaan kata kasar tidak lagi menjadi "netralisasi"</mark> tapi berubah menjadi <mark>penindasan atau perundungan (bullying).</mark></p>
+      
+      <p>Dengan demikian, ketika kata kasar digunakan dengan setara dan tanpa menimbulkan ketersinggungan, hal itu menjadi bukti bahwa kelompok telah mencapai frekuensi emosional yang sama. Praktik kolektif melanggar tabu ini mengubah larangan sosial menjadi bahasa internal, sebuah manifestasi dari <em>breaking taboos to build solidarity.</em></p>
+      
+      <p>Tanggapan lain juga di ajukan dalam penelitian <em>Daly dkk.</em> (2004) menyebut praktik ini sebagai <em>ritual abuse.</em> Dalam konteks ini, Daly dapat menyebut praktik umpatan akrab ini sebagai <em>ritual abuse,</em> karena secara bahasa ia tetap merupakan serangan verbal, tetapi secara sosial berfungsi sebagai ritual yang menegaskan kedekatan. Istilah ini menyoroti paradoks bahwa kekasaran dapat mempererat hubungan jika dilakukan berulang, disepakati, dan dipahami bersama. Namun, karena selalu membawa risiko melukai, praktik ini dapat dengan mudah bergeser dari simbol keakraban menjadi bentuk <em>dominasi</em> atau <em>relasi toxic</em> jika tidak ada kesetaraan dan persetujuan emosional. Dengan kata lain kata kasar tersebut tidak berubah secara makna, yang berubah adalah bagiamana seuatu kelompok atau individu tersebut memaknai ungkapan tersebut.</p>
+
+      <h3>Bagaimana arus zaman membuat umpatan menjadi tren dan indentitas individu modern?</h3>
+      
+      <p>Setelah menelusuri penyebabnya dari lapisan paling personal hingga lingkar pertemanan, kini pembahasan ini kita tarik ke ranah yang lebih makro. Pada titik ini, umpatan tak lagi semata-mata persoalan individu atau kelompok kecil, melainkan gejala budaya. Ia hidup di dalam ekosistem bahasa yang terus bergerak mengikuti arus zaman tanpa henti, tanpa pusat kendali tunggal.</p>
+      <p>Bahasa, pada hakikatnya, bukan benda mati. Ia adalah organisme hidup yang tumbuh, beradaptasi, dan bereaksi terhadap perubahan sosial. Maka, umpatan pun mengalami hal serupa. Ia memiliki “musim”-nya sendiri: lahir, populer, jenuh, lalu perlahan ditinggalkan atau berevolusi menjadi bentuk baru. Dalam kajian <em>sosiolinguistik,</em> pergeseran ini kerap disebut sebagai <strong>linguistic innovation</strong> sebuah inovasi bahasa yang muncul sebagai respons atas konteks sosial dan kultural tertentu.</p>
+      <p>Kita bisa melihat jejaknya dengan jelas. Dahulu, umpatan banyak bersandar pada simbol-simbol yang dekat dengan kehidupan lokal, terutama fauna atau objek sehari-hari. Namun kini, lanskap itu berubah. Kata-kata kasar tidak lagi sepenuhnya berakar pada konteks lokal, melainkan menjelma menjadi istilah hibrida hasil persilangan antara bahasa internet, budaya populer global, dan pengaruh asing.</p>
+      
+    <img src="anjay.jpg" alt="tren bahasa kasar Indonesia" class="article-illustration">
+      <div class="caption">Source @www.indonesiana.id </div>
+      
+      <p>Hal ini selaras dengan pemikiran <em>Pierre Bourdieu</em> mengenai <em>Social Capital.</em> Menggunakan umpatan yang sedang tren bukan hanya soal marah, melainkan upaya individu untuk menunjukkan bahwa mereka memiliki 'modal sosial' berupa pemahaman terhadap kode budaya terbaru. Dengan mengikuti tren umpatan tertentu, seseorang mengukuhkan identitasnya sebagai bagian dari generasi atau subkultur yang relevan.</p>
+      <p>Di sini, budaya bertindak sebagai kurator yang menentukan batas tabu mana yang boleh 'dilanggar bersama'. Kata kasar menjadi semacam tanda pengenal <em>(shibboleth)</em> yang memisahkan siapa yang 'masuk' dalam arus modernitas dan siapa yang tertinggal. Oleh karena itu, perubahan kata kasar dari masa ke masa bukan sekadar kebetulan, melainkan manifestasi dari cara masyarakat kita menegosiasikan identitas kolektif mereka di tengah derasnya arus globalisasi.</p>
+      <h3>Kesimpulan</h3>
+      <p>Pada akhirnya, aku memahami bahwa kata kasar terasa 'candu' bukan karena satu alasan tunggal, melainkan hasil kerja sama berbagai faktor yang kompleks.</p>
+      <ul>
+      <li>Secara <em>psikologis,</em> ia adalah katup pelepas emosi yang instan.</li>
+
+      <li>secara <em>linguistik,</em> ia memiliki struktur bunyi yang memuaskan untuk diucapkan.</li>
+
+      <li>Secara <em>sosial,</em> ia adalah perekat identitas kelompok</li>
+      
+      <li>dan secara <em>budaya,</em> ia adalah tiket untuk tetap relevan dengan zaman.</li>
+      
+      </ul>
+      
+      <p>Namun, jangan lupa bahwa <mark>fungsi 'netralisasi' ini hanya bekerja dalam ruang yang penuh kesepakatan. Tanpa kecerdasan untuk tahu kapan harus menahan diri, kata-kata itu akan kembali ke fungsi asalnya: senjata yang melukai.</mark> Jadi, tantangannya bukan tentang berhenti bicara kasar, tapi tentang memiliki kedewasaan untuk tahu di mana pedang itu harus disarungkan, dan di mana ia boleh digunakan untuk merayakan keakraban.</p>
+    </div>
+  </section>
+  
+  
+  <hr class="divider">
+
+<section class="references">
+  <h3>Referensi</h3>
+
+  <ol>
+    <li>
+      <strong>Bourdieu, P. (1991).</strong>
+      <em>Language and Symbolic Power.</em> Cambridge: Polity Press
+    </li>
+
+    <li>
+      <strong>Daly, J. A., dkk. (2004).</strong> <em>Joking relationships and the use of humor in organizational settings.</em>
+    </li>
+
+    <li><strong>Lev-Ari, S., & McKay, R. (2022).</strong> <em>The sound of swearing: Why do swear words sound the way they do? </em> Psychonomic Bulletin & Review. </li>
+
+    <li><strong>Sykes, G. M., & Matza, D. (1957).</strong> <em>Techniques of Neutralization: A Theory of Delinquency.</em> American Sociological Review.</li>
+    
+    <li><strong>Vingerhoets, A. J., dkk. (2013).</strong> <em>Swearing: A biopsychosocial perspective.</em> Psychological Topics.</li>
+  </ol>
+</section>
+  
+  <div class="share-box">
+  <p class="share-text">Share tulisan ini jika kalian merasa ini bermanfaat!</p>
+
+  <button id="share-btn">
+    <i class="fa-solid fa-share-nodes"></i> Bagikan
+  </button>
+</div>
+
+<div class="response-options">
+  <button class="response-btn" data-response="puas">
+    <i class="fa-solid fa-fire"></i>
+    <span>Menyala</span>
+  </button>
+
+  <button class="response-btn" data-response="netral">
+    <i class="fa-regular fa-face-smile"></i>
+    <span>Cukup</span>
+  </button>
+
+  <button class="response-btn" data-response="kurang">
+    <i class="fa-regular fa-face-meh"></i>
+    <span>Kurang</span>
+  </button>
+</div>
+
+<form
+  id="responseForm"
+  action="https://formspree.io/f/xzdppvnw"
+  method="POST"
+  style="display:none;"
+>
+  <input type="hidden" name="article_title" id="articleInput">
+  <input type="hidden" name="reader_response" id="responseInput">
+  <input type="hidden" name="page_url" id="urlInput">
+</form>
+
+  <a href="artikel.html" class="back-btn">← Kembali ke daftar artikel</a>
+
+<footer class="site-footer">
+  <p class="footer-title">Bvandia Science Journey</p>
+
+  <div class="footer-social">
+    <a href="mailto:bimasaktiawannn@gmail.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.instagram.com/bvandia" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@bvandia.science" target="blank" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/bima-saktiawan-502875352" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+
+  <p class="footer-copy">
+  · © 2026 · 
+  </p>
+</footer>
+  <script>
+      function notif(platform) {alert("kamu akan diarahkan ke " + platform);}
+  </script>
+  <script>
+  window.addEventListener('scroll', () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("reading-progress").style.width = scrolled + "%";
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article-content");
+
+    if (!article) return;
+
+    const text = article.innerText;
+    const words = text.trim().split(/\s+/).length;
+    const wordsPerMinute = 200;
+    const readingTime = Math.ceil(words / wordsPerMinute);
+
+    document.getElementById("reading-time").innerText = readingTime;
+  });
+</script>
+<script>
+  const shareBtn = document.getElementById("share-btn");
+
+  if (shareBtn) {
+    shareBtn.addEventListener("click", () => {
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          text: "Aku baru membaca tulisan ini, mungkin kamu juga tertarik.",
+          url: window.location.href
+        });
+      } else {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent("Aku baru membaca tulisan ini:");
+        window.open(`https://wa.me/?text=${text}%20${url}`, "_blank");
+      }
+    });
+  }
+</script>
+<script>
+const buttons = document.querySelectorAll('.response-btn');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const response = btn.dataset.response;
+
+    document.getElementById('articleInput').value = document.title;
+    document.getElementById('responseInput').value = response;
+    document.getElementById('urlInput').value = window.location.href;
+
+    fetch("https://formspree.io/f/xzdppvnw", {
+      method: "POST",
+      body: new FormData(document.getElementById("responseForm")),
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    lockResponse(response);
+  });
+});
+
+function lockResponse(selected) {
+  buttons.forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.response === selected);
+    btn.classList.toggle("disabled", btn.dataset.response !== selected);
+  });
+}
+</script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
+  
+
+</body>
+</html>
